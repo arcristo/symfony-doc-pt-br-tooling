@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+docker run \
+  -it \
+  -v ${PWD}/../doc/build:/workspace/build \
+  -v ${PWD}/../doc/source:/workspace/source \
+  -w /workspace/build \
+  --name symfony-doc-build \
+  --rm \
+  arcristo/symfony-doc make html

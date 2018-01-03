@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+docker run \
+  -it \
+  -p 8000:8000 \
+  -v ${PWD}/../doc/build:/workspace/build \
+  -v ${PWD}/../doc/source:/workspace/source \
+  -w /workspace/build/html \
+  --name symfony-doc-server \
+  --rm \
+  arcristo/symfony-doc python3 -m http.server 8000
