@@ -1,0 +1,4 @@
+[submodule "doc/source"]
+	path = doc/source
+	url = git@github.com:arcristo/symfony-doc-pt-br.git
+	branch = 3.4
